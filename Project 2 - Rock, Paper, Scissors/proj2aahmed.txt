@@ -1,0 +1,13 @@
+#Name: Faizan Ahmed
+#Project 2a: Pseudocode
+#Pseudocode for charging a cellphone in everyday life
+
+plugin the phone charger in the outlet
+connect the charger to the cellphone
+while phone is charging
+	if the cellphone battery is less than 100%
+		keep charging
+	else 
+		remove the charger from the cellphone
+	end
+end

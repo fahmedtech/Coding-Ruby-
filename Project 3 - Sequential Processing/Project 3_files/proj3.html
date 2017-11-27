@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)http://facweb.cs.depaul.edu/sjost/it211/projects/proj3.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sequential Processing</title>
+<style type="text/css">
+.c { text-align: center }
+</style>
+<link rel="stylesheet" type="text/css" href="stylepage(1).css">
+<style type="text/css"></style></head>
+
+<body><p style="text-align: right">
+<a href="http://facweb.cs.depaul.edu/sjost/it211/projects.htm">To Projects</a>
+</p>
+
+
+
+<h2>IT 211 -- Project 3</h2>
+<h3>Sequential Processing</h3>
+<ul type="disc">
+<li><strong>Goal:</strong> &nbsp; Compute student GPAs from student records.
+<br>&nbsp;</li>
+
+<li><strong>Input:</strong> &nbsp; First and last name of desired student; student records for all students, redirected from 
+<a href="http://facweb.cs.depaul.edu/sjost/it211/projects/student-records.txt">student-records.txt</a>.  Enter desired first and last name at 
+the keyboard (STDIO). <br>&nbsp;</li>
+
+<li><strong>STDOUT Output: </strong> &nbsp; GPA of desired 
+student.
+<br>&nbsp;</li>
+
+<li><strong>Relevant Examples:</strong> &nbsp;
+See the examples in the Sequential Processing Section.
+<br>&nbsp; </li>
+
+<li><strong>Pseudocode: </strong>&nbsp;<br>
+<ul>
+<pre>read desired_first_name from keyboard
+read desired_last_name from keyboard
+initialize total_credit_hours to 0.0
+initialize total_grade_points to 0.0
+open input file to create file object fin
+while line = fin.gets
+    use split function to extract fields from line
+    assign these variables values from fields array. use to_i for credit_hours:
+        last_name, first_name, credit_hours, grade
+  
+    if first_name == desired_first_name &amp;&amp; last_name == desired_last_name
+        
+        if grade == "A"
+            grade_points = credit_hours * 4
+        elsif grade == "B"
+            grade_points = credit_hours * 3
+        ... # Same for grades C, D, and F.               
+        end        
+               
+        update total_credit_hours
+        update total_grade_points</pre>
+	<pre>    end
+end
+close fin
+compute gpa = total_grade_points / total_credit_hours
+print result    
+  
+</pre>
+</ul></li>
+
+<li>Grading Breakdown: Functionality: 65%; Indentation: 10%; Source Code Header: 5%; Source Code Comments: 10%; Properly Submitted: 10%
+<br>&nbsp;<br>
+For full credit, each section of your script should contain a comment at the beginning that explains what that section does.
+<br>&nbsp;<br>
+For full credit, the file that you submit should look like proj3smith.rb or 
+proj3smith.rb.txt.</li>
+</ul>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+</body></html>

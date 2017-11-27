@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)http://facweb.cs.depaul.edu/sjost/it211/projects/proj5.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Jumble Puzzle</title>
+<style type="text/css">
+.c { text-align: center }
+</style>
+<link rel="stylesheet" type="text/css" href="stylepage(1).css">
+<style type="text/css"></style></head>
+
+<body><p style="text-align: right">
+<a href="http://facweb.cs.depaul.edu/sjost/it211/projects.htm">To Projects</a>
+</p>
+
+
+
+<h2>IT 211 -- Project 5</h2>
+
+
+<h3>Unscramble Jumble Strings</h3>
+<ul type="disc">
+<li><strong>Goal:</strong> &nbsp; Unscramble permuted words by generating all 
+permutations of Jumble string and searching for word in Unix dictionary.
+<br>&nbsp;</li>
+<li><strong>Sample Jumble Puzzles:</strong> <a href="http://www.uclick.com/client/sea/tmjmf/" target="new">www.uclick.com/client/sea/tmjmf/</a><br>
+Your Project 5 submission will unscramble the jumble words in the first phase of the puzzle.  It will not work to unscramble the phrase, which may consist of multiple words,
+in the second phase.
+<br>&nbsp;</li>
+<li><strong>Unix Dictionary:</strong>
+<a href="http://facweb.cs.depaul.edu/sjost/it313/examples/word-search/dict.txt">dict.txt </a>
+<br>&nbsp;</li>
+<li><strong>Details:</strong><br>&nbsp;<br>
+<ol type="1">
+<li>Write a user defined function named to_array that converts a String object to an array like this:<br>
+<ul>
+<pre>s = "dog"
+a = to_array(s)
+print a, "\n"
+
+Output:
+["d", "o", "g"]
+</pre></ul>
+The <a href="http://facweb.cs.depaul.edu/sjost/it211/notes/0506.htm#enum-code">Enumerators and Code Blocks Section</a> 
+in the 5/6 Notes may help you.
+<br>&nbsp;</li>
+
+<li>Write a method called get_permulations that inputs an array of single 
+characters (like <span class="tt">["d", "o", "g"]</span>).&nbsp; Your method should return an array of all permutations of the Jumble string.
+The permutations in the array should be in string format.&nbsp; The 
+<a href="http://facweb.cs.depaul.edu/sjost/it211/notes/0506.htm#enum-code">Enumerators and Code Blocks Section</a> in the 5/6 Notes 
+may help you. For example:<br>
+<ul>
+<pre>a = ["d", "o", "g"]
+perms = get_permutations(a)
+print perms, "\n"
+
+Output:
+["dog", "dgo", "odg", "ogd", "gdo", "god"]
+</pre>
+</ul></li>
+
+<li>Compare the words in the Unix dictionary to the permutation strings in the array.  Print any matches that are found.
+Here is some pseudocode that might help you:<br>
+<ul>
+<pre>Input Jumble string from keyboard. (Be sure to
+  remove "\n" from end of input.)
+
+Obtain array of letters from Jumble string
+  using to_array method (Item 1).
+Obtain array of permutations from array
+  using get_permutations method (Item 2).
+
+Open Unix dictionary file to create file object fin.
+while more lines in dictionary file get line
+  Get word from line of dictionary file.
+  if word starts with a lower case letter
+    for each permutation in array called perm
+      if perm is equal to word
+        print word
+        exit script
+      end
+    end 
+  end  
+end
+Close file object fin. 
+</pre>
+</ul>
+The reason we only consider words that start with lower case letters is that Jumble strings never represent proper names.</li>
+</ol> </li>
+
+
+</ul>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+</body></html>

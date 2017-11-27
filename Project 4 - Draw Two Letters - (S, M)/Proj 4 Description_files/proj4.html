@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)http://facweb.cs.depaul.edu/sjost/it211/projects/proj4.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Draw a Letter</title>
+<style type="text/css">
+.c { text-align: center }
+</style>
+<link rel="stylesheet" type="text/css" href="stylepage(1).css">
+<style type="text/css"></style></head>
+
+<body><p style="text-align: right">
+<a href="http://facweb.cs.depaul.edu/sjost/it211/projects.htm">To Projects</a>
+</p>
+
+
+
+<h2>IT 211 -- Project 4</h2>
+
+
+<h3>Draw Two Letters</h3>
+<ul type="disc">
+<li><strong>Goal:</strong> &nbsp; Draw two letters using "*" characters at the computer screen (STDOUT).
+<br>&nbsp;</li>
+
+<li>Look up your <a href="http://facweb.cs.depaul.edu/sjost/it211/projects/letter-assignments.htm">letter assignments here</a>.
+<br>&nbsp;</li>
+
+<li><strong>Relevant Examples:</strong> <a href="http://facweb.cs.depaul.edu/sjost/it211/examples.htm#letter-h">LetterH</a>,
+<a href="http://facweb.cs.depaul.edu/sjost/it211/examples.htm#letter-z">LetterZ</a>,
+<a href="http://facweb.cs.depaul.edu/sjost/it211/examples.htm#french-flag">French Flag Example</a>.
+<br>&nbsp;</li>
+
+<li><strong>Restriction:</strong> when drawing letters, you must use double loops for which the action only prints
+one character (such as "*") at a time.
+<br>&nbsp;</li>
+
+<li><strong>Important:</strong> &nbsp; Draw a hand sketch of your letter before you start writing any code.
+<br>&nbsp;</li>
+
+<li><strong>Optional:</strong> If you wish, draw your letter in a .PBM or .PGM, 
+or .PPM image file as with the 
+<a href="http://facweb.cs.depaul.edu/sjost/it211/examples.htm#french-flag">French Flag Example</a>.&nbsp; Sometimes 
+the file extension .PNM (Portable Any Map) is used generically to indicate that 
+any one of the three file formats PBM, PGM, or PPM is being used.&nbsp; If you 
+expect to obtain an A in IT 211, your Project 3 Ruby script should produce a 
+letter in a .PNM file.<br>&nbsp;<br>
+<ol type="1">
+<li>For a .PBM (Portable Bit Map) file, each pixel consists of 0 or 1, depending on whether the image is black or white, respectively.<br>
+The header in the first line of a PBM file is<br>
+<ul>
+<pre>P1 100 80
+</pre>
+</ul>
+were P1 is the magic number, 100 is the image width, and 80 is the image height. Here is a complete tiny image:<br>
+<ul>
+<pre>P1 3 3
+0 1 0
+1 1 0
+0 0 1
+</pre>
+</ul></li>
+
+
+<li>For a .PGM (Portable Greylevel Map) file, each pixel is a number between 0 and 255 inclusive, which represents 
+a gray level.<br>
+The first line of the file is a header like this
+<ul>
+<pre>P2 100 80 255 
+</pre>
+</ul>
+Where P2 is the magic number, 100 is the image width, 80 is the image height, and 255 is the maximum pixel value.
+Here is a complete image:<br>
+<ul>
+<pre>P2 3 3 255
+230 210  32
+120  89   5
+255 100   0
+</pre>
+</ul></li>
+
+<li>For a .PPM (Portable Pixel Map) file, each pixel contains the three color components red, green, and blue.  Each component
+ is a number between 0 and 255 inclusive, which represents a gray level.<br>
+The first line of the file is a header like this
+<ul>
+<pre>P3 100 80 255 
+</pre>
+</ul>
+Where P3 is the magic number, 100 is the image width, 80 is the image height, and 255 is the maximum pixel value.
+Here is a complete image:<br>
+<ul>
+<pre>P3 3 3 255
+  0   0 128    0   0 128    0   0 128  
+  0   0 128  196 196 196    0   0 128  
+  0   0 128    0   0 128    0   0 128      
+</pre>
+</ul></li>
+</ol></li>
+
+</ul>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+</body></html>

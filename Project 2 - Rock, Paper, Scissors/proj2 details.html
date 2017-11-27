@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)http://facweb.cs.depaul.edu/sjost/it211/projects/proj2.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Classification</title>
+<style type="text/css">
+.c { text-align: center }
+</style>
+<link rel="stylesheet" type="text/css" href="./proj2 details_files/stylepage.css">
+<style type="text/css"></style></head>
+
+<body><p style="text-align: right">
+<a href="http://facweb.cs.depaul.edu/sjost/it211/projects.htm">To Projects</a>
+</p>
+
+
+
+<h2>IT 211 -- Project 2<br>
+Write Pseudocode and Rock-Paper-Scissors Game</h2>
+
+<h3>Part A (50 points): Write Pseudocode for an Algorithm that Occurs in Everyday Life</h3>
+<ul type="disc">
+<li>Write pseudocode for an algorithm that occurs in everyday life.
+<br>&nbsp;</li>
+<li>Your pseudocode should have at least one if statement and at least one
+while loop.
+<br>&nbsp;</li>
+<li>Look at the Baking Bread, Washing Clothes, and Sorting Mail algorithms in
+the <a href="http://facweb.cs.depaul.edu/sjost/it211/documents/structured.htm">Structured Programming Details</a> document.
+<br>&nbsp;</li>
+<li>Some examples of algorithms that occur in everyday life:<br>
+<ol type="a">
+<li>Deciding which golf club to choose when hitting a ball.</li>
+<li>Deciding what to buy at the grocery store.</li>
+<li>Detailed steps for calling a friend. (Include what happens when line is busy or there is no answer.)</li>
+<li>Deciding which clothes to wear when getting dressed in the morning.</li>
+<li>Deciding who to ask out on a date.</li>
+</ol><br></li>
+<li>Grading breakdown: Correctness: 75%; Originality/Creativity: 15%; Indentation: 10%.</li>
+</ul>
+
+<a name="2b">
+<h3>Part B (100 points): Implement a Rock-Paper-Scissors Game</h3>
+</a><ul type="disc"><a name="2b">
+
+<li>Write a Ruby script that allows a human player to play the Rock-Paper-Scissors game against the computer.   
+<br>&nbsp;</li>
+
+<li>To play the game, the human player chooses one of "rock," "paper," or 
+"scissors."  The computer also chooses, randomly with equal probability, one of these three plays.
+<br>&nbsp;</li>
+
+<li>These phases determine the winner for each combination: "rock crushes scissors", "scissors cuts paper," and "paper covers rock."
+<br>&nbsp;</li>
+
+</a><li><a name="2b">In </a><a href="http://facweb.cs.depaul.edu/sjost/it211/projects/rock-paper-scissors.png">this diagram</a>, each arrow points from the winner to the user.
+<br>&nbsp;</li>
+
+<li>If both the human and the computer choose the same play, there is a tie.
+<br>&nbsp;</li>
+
+<li>Here is a sample script output.  The human player's choices are shown in red.<br>
+<ul>
+<pre>Enter human play (rock, paper, scissors): <span style="color:red">paper</span>
+Computer plays rock.
+Paper covers rock.
+Human wins.
+Score: Human 1, Computer 0.
+
+Enter human play (rock, paper, scissors): <span style="color:red">scissors</span>
+Computer plays scissors.
+Tie.
+Score: Human 1.5, Computer 0.5.
+
+Enter human play (rock, paper, scissors): <span style="color:red">scissors</span>
+Computer plays rock.
+Rock crushes scissors.
+Computer wins.
+Score: Human 1.5, Computer 1.5.
+</pre>
+</ul></li>
+
+<li>You can base your script on this pseudocode:<br>
+<ul>
+<pre>set human score to 0.0
+set computer score to 0.0
+
+while true
+
+  input human play with prompt
+  choose random number from 0, 1, or 2
+  
+  if random number is 0
+    set computer play to rock
+  elsif random number is 1
+    set computer play to paper
+  elseif random number is 2
+    set computer play to scissors
+  end
+  
+  if human plays rock and computer plays rock
+    Result is tie.
+    Add 0.5 to each score.
+  elsif human plays rock and computer plays paper
+    Result is computer wins.
+    Add 1 to computer score.
+  elsif human plays rock and computer plays scissors
+    Result is human wins.
+    Add 1 to human score.
+  elsif human plays paper and computer plays rock
+    Result is human wins.
+    Add 1 to human score.
+  elsif human plays paper and computer plays paper
+    Result is tie.
+    Add 0.5 to each score.
+  elsif human plays paper and computer plays scissors
+    Result is computer wins.
+    Add 1 to computer score.
+  elsif human plays scissors and computer plays rock
+    Result is computer wins.
+    Add 1 to computer score.
+  elsif human plays scissors and computer plays paper
+    Result is human wins.
+    Add 1 to human score.
+  elsif human plays scissors and computer plays scissors
+    Result is tie.
+    Add 0.5 to each score.
+  end
+  display human score and computer score
+
+end
+</pre>
+</ul></li>
+
+<li>Use Control-C to interrupt and terminate your script when you are finished 
+playing the game.
+<br>&nbsp;</li>
+
+<li>If you hope to receive an A in the class, you should implement this enhanced 
+game called Rock-Paper-Scissors-Lizard-Spock. The rules of this enhanced game 
+are shown in
+<a href="http://facweb.cs.depaul.edu/sjost/it211/projects/enhanced-rock-paper-scissors.png">this diagram</a>.  Whereas the original game has 9 (3 × 3) possible move combinations, the enhanced game has 25 (5 × 5) move combinations.
+<br>&nbsp;</li>
+
+<li><strong>Grading breakdown:</strong> Functionality: 60%, User interface, including spelling and grammar: 10%, Comments: 10%, Indentation: 10%, Submitted properly: 10%</li>
+</ul>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+</body></html>

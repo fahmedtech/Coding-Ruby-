@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)http://facweb.cs.depaul.edu/sjost/it211/projects/proj6.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>User Defined Classes</title>
+<style type="text/css">
+.c { text-align: center }
+</style>
+<link rel="stylesheet" type="text/css" href="stylepage(1).css">
+<style type="text/css"></style></head>
+
+<body><p style="text-align: right">
+<a href="http://facweb.cs.depaul.edu/sjost/it211/projects.htm">To Projects</a>
+</p>
+
+
+
+<h2>IT 211 -- Project 6</h2>
+
+
+<h3>User Defined Classes</h3>
+<ul type="disc">
+<li><strong>Deliverables:</strong> Souce code file for class; source code file that creates objects and tests the class; .yaml file that contains the array of objects
+in YAML format.
+<br>&nbsp;</li>
+
+<li><strong>Goal:</strong> &nbsp; Design, implement, and test a user defined class similar to the 
+Person or SavingsAccount classes.
+You may also get some ideas from the BabyDragon class on Page 133 in the 
+textbook.<br>&nbsp;</li>
+
+<li><strong>Examples of Classes to Use for your Project:</strong> AirplanePassenger, Baby, 
+CatalogItem, DriversLicense, GroceryItem, InsurancePolicy, LibraryBook, 
+LibraryCD, LibraryPatron, Pet, Store, Student.  
+<br>&nbsp;</li>
+
+<li><strong>UML Diagram:</strong> Submit a UML diagram for your class.  You can include the UML diagram as comments at the top
+of your class code (use typewriter graphics if you do this), or in a separate file.
+<br>&nbsp;</li>
+
+<li><strong>Example Classes:</strong> &nbsp; Do not use these classes that are 
+posted as examples on the class website or discussed in the textbook: Person, SavingsAccount, Coin, Automobile, BabyDragon.
+<br>&nbsp;</li>
+
+<li><strong>Design Specifications:</strong> &nbsp;  For full credit, your class should have<br>&nbsp;<br>
+<ol type="1">
+<li>An initialize method.
+<br>&nbsp;</li>
+<li>At least four fields, including at least one read-only field and at least one read/write field.<br>&nbsp;</li>
+<li>A to_s method.<br>&nbsp;</li>
+<li>At least one method of your choice, in addition to the initialize, to_s methods 
+and the getters and setters.</li>
+</ol><br></li>
+
+<li><strong>Code Specifications:</strong> &nbsp; Put the class code and test code 
+in separate files.<br>&nbsp;<br>
+<ol type="1">
+<li>Write explicit getter and setter methods.<br>&nbsp;</li>
+<li>Include source code comments.<br>&nbsp;</li>
+<li>Indent your source code properly.  Each indentation should be 2 spaces.</li>
+</ol><br></li>
+
+<li><strong>Testing Specifications:</strong><br>&nbsp;<br>
+<ol type="1">
+<li>Create an array that contains at least three objects.<br>&nbsp;</li>
+<li>Call each method of your class to test it.<br>&nbsp;</li>
+<li>Call the <span class="tt">to_yaml</span> method to convert the array of objects to a YAML string. You don't need to 
+save the YAML string to an output file.  To call use the <span class="tt">to_yaml</span> method, you need<br>
+<ul>
+<pre>require 'yaml'
+</pre></ul>
+at the top of your test script.  If the name of your object array is 
+<span class="tt">objects</span>, print the
+YAML string of the objects like this:<br>
+<ul>
+<pre>print objects.to_yaml, "\n"
+</pre></ul></li>
+</ol><br></li>
+
+<li><strong>Grading Breakdown:</strong> &nbsp; UML Diagram: 25%; Creativity/Originality: 15%; Code Functionality: 35%; Test Code Completeness: 25%.</li>
+</ul>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+</body></html>

@@ -1,0 +1,57 @@
+#Author: Faizan Ahmed
+#Project 3
+#Compute student's GPAs from student records 
+
+#Reading input from keyboard
+STDERR.print "Enter the desired first name: "
+desired_fname = STDIN.gets.chomp
+
+STDERR.print "Enter the desired last name: "
+desired_lname = STDIN.gets.chomp
+
+#Initializing variables
+total_credit_hours = 0.0
+total_grade_points = 0.0
+
+#Open input file to create file object fin
+fin = File.open("student-records.txt","r")
+
+#While loop
+while line = fin.gets
+	#Split Function to extract fields from line
+	field = line.chomp.split(",")
+	#Assign variable values from fields array from 'txt file'
+	last_name = field[1]
+	first_name = field[2]
+	credit_hours = field[6].to_i
+	grade = field[7]
+	
+	if first_name == desired_fname && last_name == desired_lname
+		if grade == "A" 
+			grade_points = credit_hours * 4
+		elsif grade == "B"
+			grade_points = credit_hours * 3
+		elsif grade == "C"
+			grade_points = credit_hours * 2
+		elsif grade == "D"
+			grade_points = credit_hours * 1
+		elsif grade == "F"
+			grade_points = credit_hours * 0
+		end
+		
+		#Updating Variables
+		total_credit_hours += credit_hours.to_f
+		total_grade_points += grade_points.to_i
+	end
+end
+
+#Closing file
+fin.close
+
+#Computing GPA
+gpa = (total_grade_points/total_credit_hours).round(2)
+
+STDOUT.print "The GPA for student: '#{desired_fname} #{desired_lname}' is #{gpa}.\n"
+
+
+
